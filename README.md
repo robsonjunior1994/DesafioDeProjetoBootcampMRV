@@ -10,3 +10,7 @@ Nesse primeiro commit eu criei os Modelos do meu projeto, serie, midia e genero,
 # 2 - Segunda etapa 
 
 Nessa segunda etapa, eu criei o listar series a forma que criei foi parecida com a que foi ensinada, usando o operador ternário para exibição do status deletado ou ativo a série, mas eu fiz uma modificação na classe serie, coloquei as propriedades como publicas e alterei a visibilidade do modificador SET para privado, para poder recuperar a propriedade com o GET e não criar mais código, ja que existe o GET pronto.
+
+# 3 - Terceira etapa
+
+Nessa etapa eu criei o excluir, tive que fazer uma alteração na adição do ID que acontece na classe série, ele é uma propriedade static que pertence a classe, eu coloquei para que a adição dele no construtor seja depois de adicionar o primeiro id de valor 0 a serie que é inserida na lista
