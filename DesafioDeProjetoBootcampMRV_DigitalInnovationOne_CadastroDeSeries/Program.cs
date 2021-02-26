@@ -36,6 +36,7 @@ namespace DesafioDeProjetoBootcampMRV
                     case "3":
                         Console.WriteLine("*/////////////////////////////////////////*");
                         Console.WriteLine("3 - Atualizar série, digite o ID da série:");
+                        ServiceSerie.Atualizar(int.Parse(Console.ReadLine()), Series);
                         Console.WriteLine("*/////////////////////////////////////////*\n");
                         break;
 

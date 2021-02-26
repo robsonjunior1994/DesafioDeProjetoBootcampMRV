@@ -10,13 +10,8 @@ namespace DesafioDeProjetoBootcampMRV.Services
     {
          public static void Adicionar(RepositorySerie Series)
         {
-            int cont = 0;
-            foreach (var item in Enum.GetValues(typeof(Genero)))
-            {
-                //Console.WriteLine($"{item}, {Enum.GetName(typeof(Genero),item)}");
-                cont++;
-                Console.WriteLine($"#{cont} - {item}");
-            }
+            ListarGeneros();
+
             int genero = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Digite o nome da série:");
@@ -35,6 +30,17 @@ namespace DesafioDeProjetoBootcampMRV.Services
             return;
         }
 
+        private static void ListarGeneros()
+        {
+            int cont = 0;
+            foreach (var item in Enum.GetValues(typeof(Genero)))
+            {
+                //Console.WriteLine($"{item}, {Enum.GetName(typeof(Genero),item)}");
+                cont++;
+                Console.WriteLine($"#{cont} - {item}");
+            }
+        }
+
         public static void Listar(RepositorySerie Series)
         {
             string status;
@@ -51,12 +57,35 @@ namespace DesafioDeProjetoBootcampMRV.Services
             Series.Excluir(id);
         }
 
-        public static void BuscarPorId(int id, RepositorySerie Series)
+        public static Serie BuscarPorId(int id, RepositorySerie Series)
         {
             string status;
             var s = Series.RetornarPorId(id);
             Console.WriteLine($"#ID: {s.Id}, Título: {s.Titulo}, Gênero: {s.Genero}," +
                     $" Descrição: {s.Descricao}, status: { status = (s.Deletado == true ? "deletada" : "ativa")}");
+
+            return s;
+        }
+
+        public static void Atualizar(int id, RepositorySerie Series)
+        {
+            var serie = BuscarPorId(id, Series);
+
+            ListarGeneros();
+            int genero = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o nome da série:");
+            string titulo = Console.ReadLine();
+
+            Console.WriteLine("Digite o ano da série:");
+            string ano = Console.ReadLine();
+
+            Console.WriteLine("Digite a descrição da série:");
+            string descricao = Console.ReadLine();
+
+            serie.Atualizar(titulo,descricao,ano,(Genero)genero);
+
+            Series.Atualizar(id, serie);
         }
     }
 }

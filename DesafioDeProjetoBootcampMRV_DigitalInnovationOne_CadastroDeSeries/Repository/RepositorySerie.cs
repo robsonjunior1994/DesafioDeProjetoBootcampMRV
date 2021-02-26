@@ -13,6 +13,11 @@ namespace DesafioDeProjetoBootcampMRV.Repository
             ListaDeSeries.Add(serie);
         }
 
+        public void Atualizar(int id, Serie serie)
+        {
+            ListaDeSeries[id] = serie;
+        }
+
         public void Excluir(int id)
         {
             ListaDeSeries[id].Excluir();

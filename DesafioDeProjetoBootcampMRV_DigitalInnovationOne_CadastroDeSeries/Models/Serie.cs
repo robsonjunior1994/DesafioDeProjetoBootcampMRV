@@ -30,5 +30,12 @@ namespace DesafioDeProjetoBootcampMRV.Models
             this.Deletado = true;
         }
 
+        internal void Atualizar(string titulo, string descricao, string ano, Genero genero)
+        {
+            this.Genero = genero;
+            this.Titulo = titulo;
+            this.Descricao = descricao;
+            this.Ano = ano;
+        }
     }
 }
