@@ -3,7 +3,7 @@ Bootcamp MRV na Digital Innovation One -  Criando um APP simples de cadastro de 
 
 ### RESUMO DO PROJETO
 Foi bem proveitoso esse desafio, alguns pontos que acho que vale apena eu falar aqui é que:
-- Separei em mais uma camada o programa, criei uma classe de serviço, coloquei ela como static então eu chamo ela sem ter que instanciar e tudo que precisa ser feito para manipular eu faço dentro dela, inclusive chamar a outra camada de Repository;
+- Separei em mais uma camada o programa, criei uma classe de serviço, coloquei ela como static então eu chamo ela sem ter que instanciar e tudo que precisa ser feito para manipular eu faço dentro dela, inclusive chamar a outra camada de Repository, com essa nova camada eu também despoluir a classe principal do programa;
 - Fiz uma pequena mudança quando vou adicionar um número ao ID de Série, eu criei uma propriedade statica que vai contando a cada criação de Série(no construtor da classe Série), e adiciono ao ID da Serie inserida na ListaDeSerie;
 - Fiz o uso dos operadores GET da classe Serie ao invés de criar um método para retornar eles.
 
