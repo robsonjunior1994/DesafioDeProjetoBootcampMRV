@@ -18,3 +18,7 @@ Nessa etapa eu criei o excluir, tive que fazer uma alteração na adição do ID
 # 4 - Quarta etapa
 
 Nessa etapa eu criei a opção de buscar por ID e a função de limpar a tela, nada de diferente pra comentar
+
+# 5 - Quinta etapa 
+
+Nessa etapa eu criei o atualizar série por id, tive que fazer algumas mudanças para não ficar digitando código repetido, eu tive que abstrair a listagem dos genero para um metodo, e tive que alterar o retorno do ServiceSerie.BuscarPorId, para além de imprimir na tela retornar o objeto série, para atualizar a lista, não fiz nada de muito diferente do projeto produzido em aula.
