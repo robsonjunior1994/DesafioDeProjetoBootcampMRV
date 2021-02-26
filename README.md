@@ -14,3 +14,7 @@ Nessa segunda etapa, eu criei o listar series a forma que criei foi parecida com
 # 3 - Terceira etapa
 
 Nessa etapa eu criei o excluir, tive que fazer uma alteração na adição do ID que acontece na classe série, ele é uma propriedade static que pertence a classe, eu coloquei para que a adição dele no construtor seja depois de adicionar o primeiro id de valor 0 a serie que é inserida na lista
+
+# 4 - Quarta etapa
+
+Nessa etapa eu criei a opção de buscar por ID e a função de limpar a tela, nada de diferente pra comentar
