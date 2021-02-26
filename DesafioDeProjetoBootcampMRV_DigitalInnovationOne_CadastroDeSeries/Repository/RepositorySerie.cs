@@ -13,5 +13,14 @@ namespace DesafioDeProjetoBootcampMRV.Repository
             ListaDeSeries.Add(serie);
         }
 
+        public void Excluir(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Serie> Lista()
+        {
+            return ListaDeSeries;
+        }
     }
 }

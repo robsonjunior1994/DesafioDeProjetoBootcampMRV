@@ -1,4 +1,5 @@
 ﻿using DesafioDeProjetoBootcampMRV.Models;
+using DesafioDeProjetoBootcampMRV.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +8,7 @@ namespace DesafioDeProjetoBootcampMRV.Services
 {
      static class ServiceSerie
     {
-         public static void Adicionar(List<Serie> Series)
+         public static void Adicionar(RepositorySerie Series)
         {
             int cont = 0;
             foreach (var item in Enum.GetValues(typeof(Genero)))
@@ -32,6 +33,17 @@ namespace DesafioDeProjetoBootcampMRV.Services
             Series.Add(serie);
 
             return;
+        }
+
+        public static void Listar(RepositorySerie Series)
+        {
+            string status;
+
+            foreach (var s in Series.Lista())
+            {
+                Console.WriteLine($"#ID: {s.Id}, Título: {s.Titulo}, Gênero: {s.Genero}," +
+                    $" Descrição: {s.Descricao}, status: {status = (s.Deletado == true ? "deletada" : "ativa")}");  
+            }
         }
     }
 }

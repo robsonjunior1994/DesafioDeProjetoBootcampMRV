@@ -8,5 +8,7 @@ namespace DesafioDeProjetoBootcampMRV.Repository
     public interface IRepository<T>
     {
         void Add(Serie serie);
+        List<T> Lista();
+        void Excluir(int id);
     }
 }

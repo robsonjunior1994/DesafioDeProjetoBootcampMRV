@@ -1,4 +1,5 @@
 ﻿using DesafioDeProjetoBootcampMRV.Models;
+using DesafioDeProjetoBootcampMRV.Repository;
 using DesafioDeProjetoBootcampMRV.Services;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace DesafioDeProjetoBootcampMRV
     {
         static void Main(string[] args)
         {
-            List<Serie> Series = new List<Serie>();
+            RepositorySerie Series = new RepositorySerie();
             string opcao = "";
 
             while (opcao.ToUpper() != "X")
@@ -17,7 +18,8 @@ namespace DesafioDeProjetoBootcampMRV
                 switch (opcao)
                 {
                     case "1":
-                        Console.WriteLine("1 - Listar séries");
+                        Console.WriteLine("1 - Sua Lista de midias");
+                        ServiceSerie.Listar(Series);
                         break;
 
                     case "2":

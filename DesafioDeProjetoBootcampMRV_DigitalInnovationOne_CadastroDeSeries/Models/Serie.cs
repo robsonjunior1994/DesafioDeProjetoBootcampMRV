@@ -6,12 +6,12 @@ namespace DesafioDeProjetoBootcampMRV.Models
 {
     public class Serie : Midia
     {
-        private static int Index { get; set; }
-        private Genero Genero { get; set; }
-        private string Titulo { get; set; }
-        private string Descricao { get; set; }
-        private string Ano { get; set; }
-        private bool Deletado { get; set; }
+        public static int Index { get; private set; }
+        public Genero Genero { get; private set; }
+        public string Titulo { get; private set; }
+        public string Descricao { get; private set; }
+        public string Ano { get; private set; }
+        public bool Deletado { get; private set; }
 
         public Serie(Genero genero, string titulo, string descricao, string ano)
         {
