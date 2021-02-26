@@ -15,7 +15,8 @@ namespace DesafioDeProjetoBootcampMRV.Repository
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            ListaDeSeries[id].Excluir();
+
         }
 
         public List<Serie> Lista()

@@ -45,5 +45,10 @@ namespace DesafioDeProjetoBootcampMRV.Services
                     $" Descrição: {s.Descricao}, status: {status = (s.Deletado == true ? "deletada" : "ativa")}");  
             }
         }
+
+        public static void Excluir(int id, RepositorySerie Series)
+        {
+            Series.Excluir(id);
+        }
     }
 }

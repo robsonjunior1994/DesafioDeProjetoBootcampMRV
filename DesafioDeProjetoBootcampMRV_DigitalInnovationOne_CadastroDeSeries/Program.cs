@@ -13,6 +13,8 @@ namespace DesafioDeProjetoBootcampMRV
             RepositorySerie Series = new RepositorySerie();
             string opcao = "";
 
+            Series.Add(new Serie(Genero.Acao, "Vanda e Visao", "Da marvel", "2021"));
+
             while (opcao.ToUpper() != "X")
             {
                 switch (opcao)
@@ -32,7 +34,9 @@ namespace DesafioDeProjetoBootcampMRV
                         break;
 
                     case "4":
-                        Console.WriteLine("4 - Excluir série");
+                        
+                        Console.WriteLine("4 - Excluir série, digite o ID da série:");
+                        ServiceSerie.Excluir(int.Parse(Console.ReadLine()), Series);
                         break;
 
                     case "5":

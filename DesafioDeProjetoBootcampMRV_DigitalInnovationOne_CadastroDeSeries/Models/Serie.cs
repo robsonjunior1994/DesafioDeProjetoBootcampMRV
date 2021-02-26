@@ -15,13 +15,19 @@ namespace DesafioDeProjetoBootcampMRV.Models
 
         public Serie(Genero genero, string titulo, string descricao, string ano)
         {
-            Index++;
+            
             this.Id = Index;
             this.Genero = genero;
             this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
             this.Deletado = false;
+            Index++;
+        }
+
+        public void Excluir()
+        {
+            this.Deletado = true;
         }
 
     }
