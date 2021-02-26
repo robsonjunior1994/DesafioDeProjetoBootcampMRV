@@ -50,5 +50,13 @@ namespace DesafioDeProjetoBootcampMRV.Services
         {
             Series.Excluir(id);
         }
+
+        public static void BuscarPorId(int id, RepositorySerie Series)
+        {
+            string status;
+            var s = Series.RetornarPorId(id);
+            Console.WriteLine($"#ID: {s.Id}, Título: {s.Titulo}, Gênero: {s.Genero}," +
+                    $" Descrição: {s.Descricao}, status: { status = (s.Deletado == true ? "deletada" : "ativa")}");
+        }
     }
 }

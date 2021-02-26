@@ -23,5 +23,10 @@ namespace DesafioDeProjetoBootcampMRV.Repository
         {
             return ListaDeSeries;
         }
+
+        public Serie RetornarPorId(int id)
+        {
+            return ListaDeSeries[id];
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace DesafioDeProjetoBootcampMRV.Repository
         void Add(Serie serie);
         List<T> Lista();
         void Excluir(int id);
+        Serie RetornarPorId(int id);
     }
 }
